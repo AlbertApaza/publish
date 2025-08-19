@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Universitario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="LOGOUPT.png" alt="Logo Universidad">
+            </a>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">Carreras ▼</a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#">Ing. de Sistemas</a></li>
+                            <li class="submenu-item"><a href="#">Ing. Industrial</a></li>
+                            <li class="submenu-item"><a href="#">Derecho</a></li>
+                            <li class="submenu-item"><a href="#">Administración</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Admisión</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============================================= -->
+        <!-- BANNER SLIDER CON 5 DIAPOSITIVAS              -->
+        <!-- ============================================= -->
+        <section class="banner-slider">
+            <div class="slides-container">
+                <!-- Slide 1 -->
+                <div class="slide active" style="background-image: url('BANNER001.jpg');" 
+                     data-title="Simulacro Presencial (1/5)" 
+                     data-text="Inscríbete hasta el 16 de agosto y prepárate para el examen de admisión. Asegura tu ingreso a la universidad.">
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide" style="background-image: url('BANNER002.jpg');"
+                     data-title="Nuevo Campus Tecnológico (2/5)"
+                     data-text="Conoce nuestras nuevas instalaciones equipadas con laboratorios de última generación para potenciar tu aprendizaje.">
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide" style="background-image: url('BANNER003.jpg');"
+                     data-title="Convocatoria de Becas (3/5)"
+                     data-text="Postula a una de nuestras becas de excelencia académica y cumple tu sueño de ser un profesional de éxito.">
+                </div>
+                <!-- Slide 4 -->
+                <div class="slide" style="background-image: url('BANNER004.jpg');"
+                     data-title="Semana de la Innovación (4/5)"
+                     data-text="Participa en charlas y talleres con expertos internacionales sobre las últimas tendencias en tecnología y negocios.">
+                </div>
+                <!-- Slide 5 -->
+                <div class="slide" style="background-image: url('BANNER005.jpg');"
+                     data-title="Inscripciones Abiertas (5/5)"
+                     data-text="El proceso de admisión para el próximo semestre ya está disponible. No dejes pasar la oportunidad de unirte.">
+                </div>
+            </div>
+
+            <!-- Contenido de texto del Slider (para ser actualizado por JS) -->
+            <div class="slide-content">
+                <h2 id="slide-title"></h2>
+                <p id="slide-text"></p>
+                <a href="#" class="btn-slider">Más Información</a>
+            </div>
+            
+            <div class="slider-nav">
+                <button class="prev">‹</button>
+                <button class="next">›</button>
+            </div>
+
+            <div class="slider-controls">
+                <div class="slider-dots">
+                    <!-- Los puntos se generan con JS -->
+                </div>
+                <button class="play-pause-btn">❚❚</button>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- NUEVO COMPONENTE: ENLACES RÁPIDOS             -->
+        <!-- ============================================= -->
+        <section class="quick-links">
+            <div class="quick-links-container">
+                <a href="#" class="link-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm6-9h-2v2h-2v-2h-2v-2h2v-2h2v2h2z"/></svg>
+                    <span>Admisión 2024</span>
+                </a>
+                <a href="#" class="link-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zM12 11L4 6h16l-8 5z"/></svg>
+                    <span>Campus Virtual</span>
+                </a>
+                <a href="#" class="link-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/></svg>
+                    <span>Biblioteca</span>
+                </a>
+                <a href="#" class="link-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="48" height="48"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+                    <span>Nuestras Carreras</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE SERVICIOS -->
+        <section class="services-section">
+            <div class="services-container">
+                <div class="card-accordion">
+                    <!-- Panel 1: Pregrado -->
+                    <div class="accordion-panel"> <div class="accordion-title"><span>Pregrado</span></div> <div class="accordion-content"> <img src="600x800.png" alt="Estudiantes de pregrado felices"> <div class="text-content"> <h3>Formación de Pregrado</h3> <p>Construye las bases de tu futuro profesional con nuestras carreras de pregrado, diseñadas con mallas curriculares de vanguardia y un enfoque práctico que te preparará para los desafíos del mercado global.</p> <a href="#" class="btn">Ver Carreras</a> </div> </div> </div>
+                    <!-- Panel 2: Postgrado -->
+                    <div class="accordion-panel"> <div class="accordion-title"><span>Postgrado</span></div> <div class="accordion-content"> <img src="600x800.png" alt="Profesional en una maestría"> <div class="text-content"> <h3>Especialización y Postgrado</h3> <p>Eleva tu perfil y especialízate en tu campo con nuestras maestrías y doctorados. Conecta con líderes de la industria y accede a investigación de punta para convertirte en un referente de tu sector.</p> <a href="#" class="btn">Conocer Maestrías</a> </div> </div> </div>
+                    <!-- Panel 3: Idiomas -->
+                    <div class="accordion-panel"> <div class="accordion-title"><span>Idiomas</span></div> <div class="accordion-content"> <img src="600x800.png" alt="Grupo de estudiantes internacionales"> <div class="text-content"> <h3>Centro de Idiomas</h3> <p>Domina un nuevo idioma y abre las puertas al mundo. Ofrecemos programas de inglés, francés, alemán y más, con certificación internacional y una metodología inmersiva que garantiza tu fluidez.</p> <a href="#" class="btn">Inscribirme Ahora</a> </div> </div> </div>
+                    <!-- Panel 4: Colegio -->
+                    <div class="accordion-panel"> <div class="accordion-title"><span>Colegio</span></div> <div class="accordion-content"> <img src="600x800.png" alt="Estudiantes de colegio en laboratorio"> <div class="text-content"> <h3>Educación Escolar de Excelencia</h3> <p>Nuestro colegio ofrece una formación integral desde inicial hasta secundaria, con un modelo educativo innovador que fomenta el pensamiento crítico, la creatividad y los valores para formar a los líderes del mañana.</p> <a href="#" class="btn">Proceso de Admisión</a> </div> </div> </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN PERFILES -->
+        <section class="profiles">
+            <h2>Elige tu perfil</h2>
+            <div class="radio-inputs-container">
+                <div class="radio-inputs">
+                    <label> <input class="radio-input" type="radio" name="engine" checked=""> <span class="radio-tile"> <span class="radio-icon"> <svg viewBox="0 0 24 24" fill="currentColor" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm6-9h-2v2h-2v-2h-2v-2h2v-2h2v2h2z"></path></svg> </span> <span class="radio-label">Postulante</span> </span> </label>
+                    <label> <input class="radio-input" type="radio" name="engine"> <span class="radio-tile"> <span class="radio-icon"> <svg viewBox="0 0 24 24" fill="currentColor" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"></path></svg> </span> <span class="radio-label">Estudiante</span> </span> </label>
+                    <label> <input class="radio-input" type="radio" name="engine"> <span class="radio-tile"> <span class="radio-icon"> <svg viewBox="0 0 24 24" fill="currentColor" height="2rem" width="2rem" xmlns="http://www.w3.org/2000/svg"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"></path></svg> </span> <span class="radio-label">Egresado</span> </span> </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NOTICIAS -->
+        <section class="news-section">
+            <h2>Noticias y Eventos</h2>
+            <div class="card-grid">
+                <div class="card"> <img src="1920x1080.png" alt="Inscripciones Abiertas" class="card__image"> <div class="card__content"> <p class="card__title">Inscripciones Abiertas</p> <p class="card__description">El proceso de admisión para el próximo semestre ya está disponible. ¡Asegura tu lugar!</p> </div> </div>
+                <div class="card"> <img src="1920x1080.png" alt="Semana de la Ingeniería" class="card__image"> <div class="card__content"> <p class="card__title">Semana de la Ingeniería</p> <p class="card__description">Participa en conferencias, talleres y competencias que celebran la innovación y el talento.</p> </div> </div>
+                <div class="card"> <img src="1920x1080.png" alt="Conferencia de Tecnología" class="card__image"> <div class="card__content"> <p class="card__title">Conferencia Tech Day</p> <p class="card__description">Expertos de la industria compartirán las últimas tendencias en inteligencia artificial.</p> </div> </div>
+                <div class="card"> <img src="1920x1080.png" alt="Torneo Deportivo" class="card__image"> <div class="card__content"> <p class="card__title">Torneo Inter-facultades</p> <p class="card__description">Apoya a tu facultad en las competencias de fútbol, baloncesto y voleibol.</p> </div> </div>
+                <div class="card"> <img src="1920x1080.png" alt="Feria de Empleo" class="card__image"> <div class="card__content"> <p class="card__title">Feria de Empleo 2024</p> <p class="card__description">Conecta con empresas líderes y descubre oportunidades de prácticas y empleo.</p> </div> </div>
+                <div class="card"> <img src="1920x1080.png" alt="Voluntariado" class="card__image"> <div class="card__content"> <p class="card__title">Programa de Voluntariado</p> <p class="card__description">Únete a nuestras iniciativas sociales y contribuye al bienestar de la comunidad.</p> </div> </div>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- NUEVAS SECCIONES DE CONTENIDO                 -->
+        <!-- ============================================= -->
+
+        <!-- Laboratorios -->
+        <section class="info-grid-section">
+            <div class="container">
+                <h2>Nuestros Laboratorios</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Laboratorio de Cómputo">
+                        <div class="info-card-content"><h3>Laboratorios de Cómputo</h3><p>Equipados con software de última generación para carreras de ingeniería y diseño.</p></div>
+                    </div>
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Laboratorio de Química">
+                        <div class="info-card-content"><h3>Laboratorios de Química</h3><p>Espacios seguros y modernos para la experimentación y el descubrimiento científico.</p></div>
+                    </div>
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Centro de Datos y Servidores">
+                        <div class="info-card-content"><h3>Centro de Datos</h3><p>Infraestructura de red y servidores para proyectos de alto rendimiento y cloud computing.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Biblioteca -->
+        <section class="info-grid-section dark-bg">
+            <div class="container">
+                <h2>Biblioteca Central</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Sala de lectura">
+                        <div class="info-card-content"><h3>Salas de Lectura</h3><p>Ambientes silenciosos y cómodos, ideales para el estudio y la concentración individual.</p></div>
+                    </div>
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Repositorio Digital">
+                        <div class="info-card-content"><h3>Repositorio Digital</h3><p>Acceso a miles de tesis, artículos científicos y publicaciones académicas en línea.</p></div>
+                    </div>
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Cubículos de estudio grupal">
+                        <div class="info-card-content"><h3>Estudio Grupal</h3><p>Espacios colaborativos equipados con pizarras y recursos multimedia para trabajos en equipo.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Escuelas (Facultades) -->
+        <section class="info-grid-section">
+            <div class="container">
+                <h2>Escuelas Profesionales</h2>
+                <div class="info-grid wide-grid">
+                     <div class="info-card">
+                        <img src="1000x1000.png" alt="Facultad de Ingeniería y Arquitectura">
+                        <div class="info-card-content"><h3>Ingeniería y Arquitectura</h3><p>Formando profesionales que diseñan y construyen el futuro con innovación y tecnología.</p></div>
+                    </div>
+                     <div class="info-card">
+                        <img src="1000x1000.png" alt="Facultad de Ciencias de la Salud">
+                        <div class="info-card-content"><h3>Ciencias de la Salud</h3><p>Comprometidos con la formación de expertos en el cuidado de la salud y el bienestar humano.</p></div>
+                    </div>
+                     <div class="info-card">
+                        <img src="1000x1000.png" alt="Facultad de Ciencias Empresariales">
+                        <div class="info-card-content"><h3>Ciencias Empresariales</h3><p>Desarrollando líderes con visión estratégica para el mundo de los negocios globales.</p></div>
+                    </div>
+                     <div class="info-card">
+                        <img src="1000x1000.png" alt="Facultad de Derecho y Humanidades">
+                        <div class="info-card-content"><h3>Derecho y Humanidades</h3><p>Fomentando el pensamiento crítico, la ética y la justicia en la formación de nuestros estudiantes.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intercambios -->
+        <section class="info-grid-section dark-bg">
+            <div class="container">
+                <h2>Intercambios Internacionales</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Logo Alianza del Pacífico">
+                        <div class="info-card-content"><h3>Alianza del Pacífico</h3><p>Programas de movilidad estudiantil y académica en Chile, Colombia y México.</p></div>
+                    </div>
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Logo CRISCOS">
+                        <div class="info-card-content"><h3>Red CRISCOS</h3><p>Intercambio con universidades del Consejo de Rectores por la Integración de la Subregión Centro Oeste de Sudamérica.</p></div>
+                    </div>
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Mapa del mundo con conexiones">
+                        <div class="info-card-content"><h3>Convenios Bilaterales</h3><p>Oportunidades de estudio en prestigiosas universidades de Europa, Asia y Norteamérica.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Convenios -->
+        <section class="info-grid-section">
+            <div class="container">
+                <h2>Nuestros Convenios Estratégicos</h2>
+                <div class="info-grid wide-grid">
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Logo GitHub">
+                        <div class="info-card-content"><h3>GitHub Education</h3><p>Herramientas de desarrollo y control de versiones para todos nuestros estudiantes.</p></div>
+                    </div>
+                     <div class="info-card">
+                        <img src="1000x1000.png" alt="Logo Cisco">
+                        <div class="info-card-content"><h3>Cisco Networking Academy</h3><p>Certificaciones reconocidas en redes, ciberseguridad y tecnologías de la información.</p></div>
+                    </div>
+                     <div class="info-card">
+                        <img src="1000x1000.png" alt="Logo Microsoft">
+                        <div class="info-card-content"><h3>Microsoft Azure</h3><p>Acceso a servicios en la nube y plataformas de desarrollo para proyectos innovadores.</p></div>
+                    </div>
+                     <div class="info-card">
+                        <img src="1000x1000.png" alt="Logo Google">
+                        <div class="info-card-content"><h3>Google for Education</h3><p>Suite de herramientas colaborativas y recursos de aprendizaje para la comunidad universitaria.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Universitarios -->
+        <section class="info-grid-section dark-bg">
+            <div class="container">
+                <h2>Proyectos Universitarios</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Logo UPT Incuba">
+                        <div class="info-card-content"><h3>UPT Incuba</h3><p>Impulsamos startups y emprendimientos de base tecnológica nacidos en nuestras aulas.</p></div>
+                    </div>
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Equipo de robótica">
+                        <div class="info-card-content"><h3>Club de Robótica</h3><p>Diseño y construcción de robots para competencias nacionales e internacionales.</p></div>
+                    </div>
+                    <div class="info-card">
+                        <img src="1000x1000.png" alt="Proyecto de voluntariado">
+                        <div class="info-card-content"><h3>Voluntariado Social</h3><p>Proyectos de impacto comunitario que generan un cambio positivo en nuestra región.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- ==================== FOOTER ==================== -->
+    <div class="pre-footer">
+        <div class="pre-footer-grid">
+            <!-- COLUMNA 1: ESCUELAS -->
+            <div class="pre-footer-col">
+                <h4>Facultades</h4>
+                <ul>
+                    <li><a href="#">Ingeniería y Arquitectura</a></li>
+                    <li><a href="#">Ciencias de la Salud</a></li>
+                    <li><a href="#">Ciencias Empresariales</a></li>
+                    <li><a href="#">Derecho y Humanidades</a></li>
+                    <li><a href="#">Escuela de Postgrado</a></li>
+                </ul>
+            </div>
+            <!-- COLUMNA 2: ACADÉMICO E INVESTIGACIÓN -->
+            <div class="pre-footer-col">
+                <h4>Académico</h4>
+                <ul>
+                    <li><a href="#">Pregrado</a></li>
+                    <li><a href="#">Postgrado</a></li>
+                    <li><a href="#">Educación Continua</a></li>
+                </ul>
+                <h4 class="sub-heading">Investigación</h4>
+                <ul>
+                    <li><a href="#">Centros de Investigación</a></li>
+                    <li><a href="#">Repositorio Institucional</a></li>
+                    <li><a href="#">Biblioteca</a></li>
+                </ul>
+            </div>
+            <!-- COLUMNA 3: SOBRE UPT Y ADMISIÓN -->
+            <div class="pre-footer-col">
+                <h4>Sobre la UPT</h4>
+                <ul>
+                    <li><a href="#">Nuestra Historia</a></li>
+                    <li><a href="#">Misión y Visión</a></li>
+                    <li><a href="#">Acreditación</a></li>
+                    <li><a href="#">Campus Virtual</a></li>
+                </ul>
+                 <h4 class="sub-heading">Admisión</h4>
+                <ul>
+                    <li><a href="#">Modalidades</a></li>
+                    <li><a href="#">Requisitos</a></li>
+                    <li><a href="#">Becas y Financiamiento</a></li>
+                </ul>
+            </div>
+            <!-- COLUMNA 4: RECURSOS -->
+            <div class="pre-footer-col">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#">Mapa del Campus</a></li>
+                    <li><a href="#">Directorio</a></li>
+                    <li><a href="#">Noticias y Eventos</a></li>
+                    <li><a href="#">Bolsa de Trabajo</a></li>
+                    <li><a href="#">Intranet</a></li>
+                    <li><a href="#">Pasarela de Pagos</a></li>
+                    <li><a href="#">Instituto de Idiomas</a></li>
+                </ul>
+            </div>
+            <!-- COLUMNA 5: BOTONES DE ACCIÓN -->
+            <div class="pre-footer-col action-buttons">
+                <a href="#" class="btn-outline">Postular</a>
+                <a href="#" class="btn-outline">Visítanos</a>
+                <a href="#" class="btn-outline">Oportunidades Laborales</a>
+                <a href="#" class="btn-outline">Contacto</a>
+                <a href="#" class="btn-outline">Alumni</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-bottom">
+            <a href="#" class="footer-logo-bottom">
+                <img src="LOGOUPT.png" alt="Logo UPT">
+                <span>Universidad<br>Privada de Tacna</span>
+            </a>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z"/></svg></a>
+                <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.634 4.216 3.824 4.652-.668.183-1.383.232-2.1.086.616 1.923 2.413 3.32 4.545 3.359-1.87 1.468-4.22 2.34-6.79 2.03 2.025 1.303 4.436 2.06 6.985 2.06 8.355 0 12.92-6.924 12.92-12.928 0-.196-.005-.391-.014-.585.887-.64 1.657-1.441 2.278-2.355z"/></svg></a>
+                <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44c0-.795-.645-1.44-1.441-1.44z"/></svg></a>
+                <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-4.481 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
+            </div>
+            <div class="footer-legal-links">
+                <a href="#">Mapa del Sitio</a>
+                <a href="#">Políticas de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2024 Universidad Privada de Tacna.
+            </div>
+        </div>
+    </footer>
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
