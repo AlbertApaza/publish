@@ -1,0 +1,34 @@
+{
+  "header": {
+    "title": "Universidade Demosss",
+    "subtitle": "Formando os líderes do futuro"
+  },
+  "menu": {
+    "home": "Início",
+    "about": "Sobre nós",
+    "courses": "Cursos",
+    "contact": "Contato"
+  },
+  "about": {
+    "title": "Sobre a Universidade",
+    "text": "Nossa universidade oferece educação de qualidade com professores altamente capacitados."
+  },
+  "courses": {
+    "title": "Cursos disponíveis",
+    "engineering": {
+      "title": "Engenharia de Sistemas",
+      "desc": "Aprenda programação, redes e segurança da informação."
+    },
+    "business": {
+      "title": "Administração de Empresas",
+      "desc": "Desenvolva habilidades de liderança e gestão empresarial."
+    },
+    "law": {
+      "title": "Direito",
+      "desc": "Faça parte da defesa da justiça na sociedade."
+    }
+  },
+  "footer": {
+    "text": "© 2025 Universidade Demo. Todos os direitos reservados."
+  }
+}

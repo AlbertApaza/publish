@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Universidad Demo</title>
+  <script src="https://unpkg.com/i18next@22.5.1/dist/umd/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@2.2.1/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector@7.1.0/i18nextBrowserLanguageDetector.min.js"></script>
+  <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header, footer { background: #003366; color: white; padding: 15px; text-align: center; }
+    nav { background: #eee; padding: 10px; text-align: center; }
+    nav a { margin: 0 10px; text-decoration: none; color: #003366; font-weight: bold; }
+    section { padding: 20px; }
+    .cards { display: flex; gap: 15px; justify-content: center; }
+    .card { border: 1px solid #ccc; padding: 15px; width: 200px; text-align: center; }
+    .lang-select { position: fixed; top: 15px; right: 15px; }
+  </style>
+</head>
+<body>
+  <div class="lang-select">
+    <select id="languageSwitcher">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇬🇧 English</option>
+      <option value="pt">🇧🇷 Português</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="header.title">Universidad Demo</h1>
+    <p data-i18n="header.subtitle">Formando líderes del futuro</p>
+  </header>
+
+  <nav>
+    <a href="#" data-i18n="menu.home">Inicio</a>
+    <a href="#" data-i18n="menu.about">Nosotros</a>
+    <a href="#" data-i18n="menu.courses">Carreras</a>
+    <a href="#" data-i18n="menu.contact">Contacto</a>
+  </nav>
+
+  <section>
+    <h2 data-i18n="about.title">Acerca de la universidad</h2>
+    <p data-i18n="about.text">
+      Nuestra universidad ofrece educación de calidad con docentes altamente capacitados.
+    </p>
+  </section>
+
+  <section>
+    <h2 data-i18n="courses.title">Carreras disponibles</h2>
+    <div class="cards">
+      <div class="card">
+        <h3 data-i18n="courses.engineering.title">Ingeniería de Sistemas</h3>
+        <p data-i18n="courses.engineering.desc">
+          Aprende programación, redes y seguridad informática.
+        </p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="courses.business.title">Administración de Empresas</h3>
+        <p data-i18n="courses.business.desc">
+          Desarrolla habilidades de liderazgo y gestión empresarial.
+        </p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="courses.law.title">Derecho</h3>
+        <p data-i18n="courses.law.desc">
+          Forma parte de la defensa de la justicia en la sociedad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p data-i18n="footer.text">© 2025 Universidad Demo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

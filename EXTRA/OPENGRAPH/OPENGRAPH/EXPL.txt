@@ -1,0 +1,14 @@
+https://www.upt.edu.pe/upt/web/index.php
+https://www.upt.edu.pe/upt/web/
+
+
+ambos no cuentan  con OpenGraph, eso se puede definir entro de la url en los <head> son etiquetas
+example :
+<head>
+<title>UNIVERSIDAD PRIVADA DE TACNA</title>	YA TIENE
+<meta property="og:title" content="The Rock" />
+<meta property="og:type" content="video.movie" />
+<meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+<meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+...
+</head>

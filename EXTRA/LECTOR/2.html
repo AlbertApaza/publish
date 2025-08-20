@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lector al pasar el mouse</title>
+  <style>
+    p { padding: 10px; border: 1px solid #ccc; width: 300px; margin: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Universidad Privada de Tacna</h1>
+
+  <p class="leer" data-text="Bienvenido a la Universidad Privada de Tacna.">Bienvenido a la Universidad Privada de Tacna.</p>
+  <p class="leer" data-text="Nuestra misión es formar profesionales competentes.">Nuestra misión es formar profesionales competentes.</p>
+  <p class="leer" data-text="Contáctanos para más información.">Contáctanos para más información.</p>
+
+  <script>
+    const synth = window.speechSynthesis;
+
+    document.querySelectorAll(".leer").forEach(elem => {
+      elem.addEventListener("mouseenter", () => {
+        // Detener lectura anterior
+        synth.cancel();
+        // Crear nuevo texto a leer
+        const utter = new SpeechSynthesisUtterance(elem.dataset.text);
+        utter.lang = "es-ES";
+        synth.speak(utter);
+      });
+
+      // Opcional: detener lectura al salir del mouse
+      elem.addEventListener("mouseleave", () => {
+        synth.cancel();
+      });
+    });
+  </script>
+</body>
+</html>

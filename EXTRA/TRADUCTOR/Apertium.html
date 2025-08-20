@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Traducción con Apertium</title>
+</head>
+<body>
+  <h1>Hola mundo</h1>
+  <p>Este es un ejemplo con Apertium.</p>
+
+  <button onclick="traducirPagina()">Traducir a inglés</button>
+
+  <script>
+    async function traducirTexto(texto, from='spa', to='eng') {
+      const url = `https://apertium.org/apy/translate?q=${encodeURIComponent(texto)}&langpair=${from}|${to}`;
+      const resp = await fetch(url);
+      const data = await resp.json();
+      return data.responseData.translatedText;
+    }
+
+    async function traducirPagina() {
+      const elementos = document.querySelectorAll("h1, p, span, div"); 
+      for (let el of elementos) {
+        const original = el.innerText.trim();
+        if(original){
+          const traducido = await traducirTexto(original, 'spa', 'eng');
+          el.innerText = traducido;
+        }
+      }
+    }
+  </script>
+</body>
+</html>
