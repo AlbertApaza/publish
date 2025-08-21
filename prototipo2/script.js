@@ -15,16 +15,41 @@ document.addEventListener('DOMContentLoaded', () => {
             <button id="pip-next-btn" class="pip-nav-btn next"><i class="fas fa-chevron-right"></i></button>
         </div>`;
 
-    const notificationModalHTML = `
-        <div id="notification-modal" class="modal-overlay">
-            <div class="modal-content" id="notification-content">
-                <button id="close-notification-modal" class="modal-close-btn">&times;</button>
-                <h3><i class="fas fa-megaphone"></i> Avisos Importantes</h3>
-                <div style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px;"><h4>Rectificación de Matrícula 2024-II</h4><p>El proceso estará disponible del 15 al 20 de Agosto.</p><small>Publicado: 01/08/2024</small></div>
-                <div style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px;"><h4>Actualización de Métodos de Pago</h4><p>Hemos añadido nuevos métodos de pago en línea.</p><small>Publicado: 28/07/2024</small></div>
-                <div><h4>Convocatoria a Beca de Excelencia</h4><p>Revisa los requisitos y postula hasta el 30 de Agosto.</p><small>Publicado: 25/07/2024</small></div>
+const notificationModalHTML = `
+    <div id="notification-modal" class="modal-overlay">
+        <div class="modal-content" id="notification-content">
+            <button id="close-notification-modal" class="modal-close-btn">&times;</button>
+            <h3><i class="fas fa-megaphone"></i> Avisos Importantes</h3>
+            
+            <div style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px;">
+                <h4>Rectificación de Matrícula 2024-II</h4>
+                <p>
+                    El proceso estará disponible del 15 al 20 de Agosto. 
+                    <a href="https://upt.edu.pe/rectificacion-matricula-2024" target="_blank">[Descargar Aqui]</a>
+                </p>
+                <small>Publicado: 01/08/2024</small>
             </div>
-        </div>`;
+            
+            <div style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px;">
+                <h4>Actualización de Métodos de Pago</h4>
+                <p>
+                    Hemos añadido nuevos métodos de pago en línea. 
+                    <a href="https://upt.edu.pe/metodos-de-pago" target="_blank">[Ver detalles aquí]</a>
+                </p>
+                <small>Publicado: 28/07/2024</small>
+            </div>
+            
+            <div>
+                <h4>Convocatoria a Beca de Excelencia</h4>
+                <p>
+                    Revisa los requisitos y postula hasta el 30 de Agosto. 
+                    <a href="https://upt.edu.pe/beca-excelencia" target="_blank">[Descarga aquí]</a>
+                </p>
+                <small>Publicado: 25/07/2024</small>
+            </div>
+        </div>
+    </div>`;
+
 
     function handleInitialModal() {
         // Siempre abre el PIP al inicio

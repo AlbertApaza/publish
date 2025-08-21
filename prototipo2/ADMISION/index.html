@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admisión UPT - Postula Ahora</title>
+    
+    <!-- Google Fonts: Poppins y Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AÑADIDO: Font Awesome para los iconos sociales y del footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- ==================== ICONOS SOCIALES FLOTANTES (REPLICADOS) ==================== -->
+    <div class="social-sidebar">
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- HEADER -->
+    <!-- ============================================= -->
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">UPT Admisión</a>
+            <nav>
+                <ul>
+                    <li><a href="#proceso">Proceso</a></li>
+                    <li><a href="#modalidades">Modalidades</a></li>
+                    <li><a href="../CEPU/index.html">CEPU UPT</a></li>
+                    <li><a href="../RUTAPOSTULA/index.html">Ruta del Postulante</a></li>
+                    <li><a href="#bienestar">Bienestar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ============================================= -->
+        <!-- 1.1 LANDING DE ADMISIÓN (HERO) -->
+        <!-- ============================================= -->
+        <section id="admision-hero" class="hero-section angled-bg">
+            <div class="container grid-2">
+                <div class="hero-text">
+                    <h1>Tu futuro profesional empieza aquí</h1>
+                    <p>Forma parte de nuestra comunidad académica y prepárate para liderar el cambio. ¡El momento de postular es ahora!</p>
+                    <a href="#" class="btn btn-primary">Postula Ahora</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/1920x1080.png" alt="Estudiantes universitarios sonriendo">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================= -->
+        <!-- 1.2 PROCESO DE ADMISIÓN -->
+        <!-- ============================================= -->
+        <section id="proceso" class="proceso-section angled-bg angled-bg--reverse">
+            <div class="container grid-2 grid-2--swapped">
+                <div class="proceso-lista">
+                    <h2>Proceso de Admisión</h2>
+                    <ol>
+                        <li><span>1</span>Elige tu carrera y modalidad de ingreso.</li>
+                        <li><span>2</span>Regístrate en línea y completa tus datos.</li>
+                        <li><span>3</span>Realiza el pago por derecho de inscripción.</li>
+                        <li><span>4</span>Sube tus documentos en formato digital.</li>
+                        <li><span>5</span>¡Listo! Prepárate para tu examen de admisión.</li>
+                    </ol>
+                </div>
+                <div class="proceso-multimedia">
+                    <div class="video-container">
+                         <img src="https://placehold.co/1920x1080.png" alt="Video sobre el proceso de admisión">
+                         <div class="play-button"></div>
+                    </div>
+                    <div class="proceso-botones">
+                        <a href="#" class="btn btn-primary">Quiero Postular</a>
+                        <a href="#" class="btn btn-secondary">Descargar Prospecto</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="facultades-section">
+        <h2 class="titulo-facultades">Tenemos facultades para ti</h2>
+        <div class="facultades-container">
+
+            <div class="facultad-card" onclick="toggleFacultad(this)">
+            <div class="facultad-header">
+                <span class="facultad-nombre">FAING - Facultad de Ingeniería</span>
+                <span class="facultad-toggle">+</span>
+            </div>
+            <div class="facultad-content">
+                <ul>
+                <li>Escuela Profesional de Ingeniería Civil</li>
+                <li>Escuela Profesional de Ingeniería de Sistemas</li>
+                <li>Escuela Profesional de Ingeniería Electrónica</li>
+                <li>Escuela Profesional de Ingeniería Agroindustrial</li>
+                <li>Escuela Profesional de Ingeniería Ambiental</li>
+                <li>Escuela Profesional de Ingeniería Industrial</li>
+                </ul>
+                <img src="https://via.placeholder.com/1000" alt="FAING" />
+            </div>
+            </div>
+
+            <div class="facultad-card" onclick="toggleFacultad(this)">
+            <div class="facultad-header">
+                <span class="facultad-nombre">FAEDCOH - Facultad de Educación, Ciencias de la Comunicación y Humanidades</span>
+                <span class="facultad-toggle">+</span>
+            </div>
+            <div class="facultad-content">
+                <ul>
+                <li>Escuela Profesional de Educación</li>
+                <li>Escuela Profesional de Ciencias de la Comunicación</li>
+                <li>Escuela Profesional de Humanidades - Psicología</li>
+                </ul>
+                <img src="https://via.placeholder.com/1000" alt="FAEDCOH" />
+            </div>
+            </div>
+
+            <div class="facultad-card" onclick="toggleFacultad(this)">
+            <div class="facultad-header">
+                <span class="facultad-nombre">FADE - Facultad de Derecho y Ciencias Políticas</span>
+                <span class="facultad-toggle">+</span>
+            </div>
+            <div class="facultad-content">
+                <ul>
+                <li>Escuela Profesional de Derecho</li>
+                </ul>
+                <img src="https://via.placeholder.com/1000" alt="FADE" />
+            </div>
+            </div>
+
+            <div class="facultad-card" onclick="toggleFacultad(this)">
+            <div class="facultad-header">
+                <span class="facultad-nombre">FACSA - Facultad de Ciencias de la Salud</span>
+                <span class="facultad-toggle">+</span>
+            </div>
+            <div class="facultad-content">
+                <ul>
+                <li>Escuela Profesional de Medicina Humana</li>
+                <li>Escuela Profesional de Odontología</li>
+                <li>Escuela Profesional de Tecnología Médica</li>
+                </ul>
+                <img src="https://via.placeholder.com/1000" alt="FACSA" />
+            </div>
+            </div>
+
+            <div class="facultad-card" onclick="toggleFacultad(this)">
+            <div class="facultad-header">
+                <span class="facultad-nombre">FACEM - Facultad de Ciencias Empresariales</span>
+                <span class="facultad-toggle">+</span>
+            </div>
+            <div class="facultad-content">
+                <ul>
+                <li>Escuela Profesional de Ciencias Contables y Financieras</li>
+                <li>Escuela Profesional de Ingeniería Comercial</li>
+                <li>Escuela Profesional de Economía y Microfinanzas</li>
+                <li>Escuela Profesional de Administración</li>
+                <li>Escuela Profesional de Administración Turístico-Hotelera</li>
+                <li>Escuela Profesional de Administración de Negocios Internacionales</li>
+                </ul>
+                <img src="https://via.placeholder.com/1000" alt="FACEM" />
+            </div>
+            </div>
+
+            <div class="facultad-card" onclick="toggleFacultad(this)">
+            <div class="facultad-header">
+                <span class="facultad-nombre">FAU - Facultad de Arquitectura y Urbanismo</span>
+                <span class="facultad-toggle">+</span>
+            </div>
+            <div class="facultad-content">
+                <ul>
+                <li>Escuela Profesional de Arquitectura</li>
+                </ul>
+                <img src="https://via.placeholder.com/1000" alt="FAU" />
+            </div>
+            </div>
+
+        </div>
+        </section>
+
+        <style>
+        :root {
+        --upt-blue: #2D366F;
+        --upt-gold: #BD9C5D;
+        --text-dark: #212529;
+        --text-light: #6c757d;
+        --background-light: #f8f9fa;
+        --background-white: #ffffff;
+        --white: #ffffff;
+        }
+
+        /* CONTENEDOR */
+        .facultades-section {
+        background: var(--background-light);
+        padding: 40px;
+        }
+        .titulo-facultades {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--upt-blue);
+        margin-bottom: 30px;
+        }
+        .facultades-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        }
+
+        /* CARD */
+        .facultad-card {
+        background: var(--white);
+        border: 2px solid var(--upt-blue);
+        border-radius: 8px;
+        padding: 15px;
+        flex: 1 1 calc(33% - 20px);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        }
+        .facultad-card:hover {
+        transform: translateY(-3px);
+        }
+
+        /* HEADER */
+        .facultad-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+        .facultad-nombre {
+        font-weight: bold;
+        color: var(--upt-blue);
+        }
+        .facultad-toggle {
+        font-size: 1.5rem;
+        color: var(--upt-gold);
+        transition: transform 0.3s ease;
+        }
+
+        /* CONTENT OCULTO */
+        .facultad-content {
+        display: none;
+        margin-top: 10px;
+        }
+        .facultad-content ul {
+        padding-left: 20px;
+        color: var(--text-dark);
+        }
+        .facultad-content img {
+        width: 100%;
+        max-width: 1000px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-top: 10px;
+        }
+
+        /* ESTADO ACTIVO */
+        .facultad-card.active .facultad-content {
+        display: block;
+        }
+        .facultad-card.active .facultad-toggle {
+        transform: rotate(45deg);
+        }
+        </style>
+    
+        <section id="modalidades" class="modalidades-section">
+            <div class="container">
+                <h2>Descubre tu Modalidad de Ingreso</h2>
+                <p class="section-subtitle">Tenemos una opción perfecta para ti. Pasa el mouse sobre cada tarjeta para conocer más.</p>
+                <div class="modalidades-container">
+                    <div class="modalidad-card">
+                        <img src="https://placehold.co/1920x1080.png" alt="Modalidad Examen Ordinario">
+                        <div class="modalidad-content">
+                            <h3>Examen Ordinario</h3>
+                            <p>Dirigido a egresados de secundaria.</p>
+                        </div>
+                    </div>
+                    <div class="modalidad-card">
+                        <img src="https://placehold.co/1920x1080.png" alt="Modalidad Traslado Externo">
+                        <div class="modalidad-content">
+                            <h3>Traslado Externo</h3>
+                            <p>Para estudiantes de otras universidades.</p>
+                        </div>
+                    </div>
+                    <div class="modalidad-card">
+                        <img src="https://placehold.co/1920x1080.png" alt="Modalidad Titulados">
+                        <div class="modalidad-content">
+                            <h3>Titulados o Graduados</h3>
+                            <p>Si ya cuentas con un título profesional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cepreu" class="cepreu-section differentiated-section">
+            <div class="container text-center">
+                <h2>Centro Preuniversitario</h2>
+                <p>Prepárate con nosotros y asegura tu ingreso directo a la universidad. Contamos con una plana docente de primer nivel.</p>
+                <div class="cepreu-image">
+                    <img src="https://placehold.co/1920x1080.png" alt="Alumnos en el Centro Preuniversitario">
+                </div>
+                <a href="../CEPU/index.html" class="btn btn-gold">Conoce Más</a>
+            </div>
+        </section>
+        
+        <section id="test-vocacional" class="test-section">
+            <div class="container">
+                <h2>¿Aún no decides qué estudiar?</h2>
+                <p class="section-subtitle">Nuestro test vocacional te ayudará a descubrir tu pasión. ¡Es rápido y gratuito!</p>
+                <form class="test-form">
+                    <input type="text" placeholder="Nombres y Apellidos" required>
+                    <input type="email" placeholder="Correo Electrónico" required>
+                    <button type="submit" class="btn btn-primary">Iniciar Test Vocacional</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="aula-virtual" class="aula-virtual-section">
+             <div class="container grid-2">
+                <div class="aula-virtual-image">
+                     <img src="https://placehold.co/1920x1080.png" alt="Plataforma de Aula Virtual">
+                </div>
+                <div class="aula-virtual-text">
+                    <h2>Conoce Nuestra Aula Virtual</h2>
+                    <p>Accede a tus clases, materiales y recursos desde cualquier lugar. Una plataforma moderna e intuitiva diseñada para tu aprendizaje.</p>
+                    <a href="#" class="btn btn-secondary">Explorar Plataforma</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ruta-postulante" class="ruta-section differentiated-section-light">
+            <div class="container">
+                <h2 class="text-center">Ruta del Postulante</h2>
+                <div class="ruta-cards-container">
+                    <div class="ruta-card">
+                        <img src="https://placehold.co/1080x1920.png" alt="Inscripciones Abiertas">
+                        <h3>Inscripciones</h3>
+                        <p>Revisa los requisitos y regístrate en línea.</p>
+                    </div>
+                    <div class="ruta-card">
+                        <img src="https://placehold.co/1080x1920.png" alt="Cronograma de Admisión">
+                        <h3>Cronograma</h3>
+                        <p>No te pierdas las fechas importantes del proceso.</p>
+                    </div>
+                    <div class="ruta-card">
+                        <img src="https://placehold.co/1080x1920.png" alt="Eventos y Ferias Vocacionales">
+                        <h3>Eventos y Ferias</h3>
+                        <p>Participa en nuestros eventos y conoce más de UPT.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bienestar" class="bienestar-section differentiated-section">
+            <div class="container grid-2">
+                <div class="bienestar-text">
+                    <h2>Bienestar Universitario</h2>
+                    <p>Tu desarrollo integral es nuestra prioridad. Ofrecemos servicios de salud, deporte, cultura y apoyo psicopedagógico para acompañarte en tu vida universitaria.</p>
+                    <a href="../OBUN/index.html" class="btn btn-gold">Explora los Beneficios</a>
+                </div>
+                <div class="bienestar-image">
+                    <img src="https://placehold.co/1920x1080.png" alt="Actividades de bienestar universitario">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER (REPLICADO) ==================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column"><h4>FACULTADES</h4><ul><li><a href="#">Ingeniería y Arquitectura</a></li><li><a href="#">Ciencias de la Salud</a></li><li><a href="#">Ciencias Empresariales</a></li><li><a href="#">Derecho y Humanidades</a></li><li><a href="#">Escuela de Postgrado</a></li></ul></div>
+                <div class="footer-column"><h4>ACADÉMICO</h4><ul><li><a href="#">Pregrado</a></li><li><a href="#">Postgrado</a></li><li><a href="#">Educación Continua</a></li></ul><h4>INVESTIGACIÓN</h4><ul><li><a href="#">Centros de Investigación</a></li><li><a href="#">Repositorio Institucional</a></li><li><a href="#">Biblioteca</a></li></ul></div>
+                <div class="footer-column"><h4>SOBRE LA UPT</h4><ul><li><a href="#">Nuestra Historia</a></li><li><a href="#">Misión y Visión</a></li><li><a href="#">Acreditación</a></li><li><a href="#">Campus Virtual</a></li></ul><h4>ADMISIÓN</h4><ul><li><a href="#">Modalidades</a></li><li><a href="#">Requisitos</a></li><li><a href="#">Becas y Financiamiento</a></li></ul></div>
+                <div class="footer-column"><h4>RECURSOS</h4><ul><li><a href="#">Mapa del Campus</a></li><li><a href="#">Directorio</a></li><li><a href="#">Noticias y Eventos</a></li><li><a href="#">Bolsa de Trabajo</a></li><li><a href="#">Intranet</a></li><li><a href="#">Pasarela de Pagos</a></li><li><a href="#">Instituto de Idiomas</a></li><li><a href="#">Portal de Transparencia</a></li></ul></div>
+            </div>
+        </div>
+    </footer>
+    <div class="sub-footer">
+        <div class="container sub-footer-content">
+            <div class="sub-footer-logo"><img src="LOGOUPT.png" alt="Logo UPT"><span>Universidad Privada de Tacna</span></div>
+            <div class="sub-footer-links"><a href="#">Mapa del Sitio</a><span>|</span><a href="#">Políticas de Privacidad</a><span>|</span><a href="#">Términos y Condiciones</a><span>|</span><a href="#">Libro de Reclamaciones</a></div>
+            <div class="sub-footer-social"><a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a><a href="#" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></div>
+            <p class="sub-footer-copy">&copy; 2024 Universidad Privada de Tacna. Todos los derechos reservados.</p>
+        </div>
+    </div>
+
+    <!-- Scripts (Se mantienen los originales) -->
+    <script src="script.js"></script>
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    <script>
+        function toggleFacultad(card) {
+          card.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
