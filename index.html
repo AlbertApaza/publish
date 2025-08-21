@@ -1,10 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prototipos UX/UIX</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #212529;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2D366F;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    li {
+      background: #ffffff;
+      margin: 10px 0;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 2px solid #BD9C5D;
+      transition: 0.3s;
+    }
+    li:hover {
+      background: #BD9C5D;
+    }
+    a {
+      text-decoration: none;
+      color: #2D366F;
+      font-weight: bold;
+    }
+    li:hover a {
+      color: #ffffff;
+    }
+    /* Sección destacada */
+    .important-sections {
+      margin-top: 50px;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 2px solid #2D366F;
+    }
+    .important-sections h2 {
+      text-align: center;
+      color: #BD9C5D;
+    }
+    .important-sections ul {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .important-sections li {
+      border: 1px dashed #2D366F;
+    }
+  </style>
 </head>
 <body>
   <h1>Demostración de Prototipos</h1>
@@ -12,8 +68,29 @@
     <li><a href="prototipo1/index.html" target="_blank">🔗 Prototipo 01</a></li>
     <li><a href="prototipo2/index.html" target="_blank">🔗 Prototipo 02</a></li>
     <li><a href="prototipo3/index.html" target="_blank">🔗 Prototipo 03</a></li>
-    <li><a href="prototipo3firs/index.html" target="_blank">🔗 Prototipo 03 acordeon</a></li>
-	
+    <li><a href="prototipo3firs/index.html" target="_blank">🔗 Prototipo 03 acordeón</a></li>
   </ul>
+
+  <!-- Nueva sección con contenido de EXTRA -->
+  <section class="important-sections">
+    <h2>📌 Contenido de EXTRA</h2>
+    <ul>
+      <!-- Carpeta LECTOR -->
+      <li><a href="EXTRA/LECTOR/1.html" target="_blank">📖 Lector - Ejemplo 1</a></li>
+      <li><a href="EXTRA/LECTOR/2.html" target="_blank">📖 Lector - Ejemplo 2</a></li>
+
+      <!-- Carpeta OPENGRAPH -->
+      <li><a href="EXTRA/OPENGRAPH/OPENGRAPH/EJEMPLO CON OPENGRAPH.png" target="_blank">🖼️ Ejemplo con OpenGraph</a></li>
+      <!-- (Puedes agregar más si quieres: EXPL.txt, NO TIENE OPENGRAPH.png, etc.) -->
+
+      <!-- Carpeta TRADUCTOR -->
+      <li><a href="EXTRA/TRADUCTOR/translateGoogle Script.html" target="_blank">🌍 Traductor - Google Script</a></li>
+      <li><a href="EXTRA/TRADUCTOR/18n.html" target="_blank">🌍 Traductor - i18n</a></li>
+      <li><a href="EXTRA/TRADUCTOR/3ra.html" target="_blank">🌍 Traductor - 3ra opción</a></li>
+      <li><a href="EXTRA/TRADUCTOR/Apertium.html" target="_blank">🌍 Traductor - Apertium</a></li>
+      <li><a href="EXTRA/TRADUCTOR/staticJSON.html" target="_blank">🌍 Traductor - Static JSON</a></li>
+      <li><a href="EXTRA/TRADUCTOR/proyecto18in/index.html" target="_blank">🌍 Traductor - Proyecto i18n (con locales)</a></li>
+    </ul>
+  </section>
 </body>
 </html>
