@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const pipModalHTML = `
         <div id="pip-modal-overlay" class="modal-overlay">
             <div class="pip-image-container">
-                <img src="1080X1920.png" alt="Anuncio 1" class="pip-image">
-                <img src="1080X1920.png" alt="Anuncio 2" class="pip-image">
+                <img src="1080x1920.png" alt="Anuncio 1" class="pip-image">
+                <img src="1080x1920.png" alt="Anuncio 2" class="pip-image">
             </div>
             <button id="close-pip-modal" class="pip-close-btn">&times;</button>
             <button id="pip-prev-btn" class="pip-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
