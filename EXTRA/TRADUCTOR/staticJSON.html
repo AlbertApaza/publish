@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Traductor Local</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header, footer {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    .traductor { text-align: right; margin: 15px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="titulo">Bienvenido a Mi Página Web</h1>
+    <p id="subtitulo">Ejemplo con traductor local</p>
+  </header>
+
+  <div class="traductor">
+    <label for="idioma">🌐 Idioma:</label>
+    <select id="idioma" onchange="cambiarIdioma(this.value)">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="pt">Português</option>
+    </select>
+  </div>
+
+  <main>
+    <h2 id="nosotros">Sobre Nosotros</h2>
+    <p id="textoNosotros">
+      Somos una empresa dedicada a ofrecer soluciones tecnológicas innovadoras.
+    </p>
+
+    <h2 id="servicios">Nuestros Servicios</h2>
+    <ul>
+      <li id="srv1">Desarrollo de software a medida</li>
+      <li id="srv2">Diseño y desarrollo de páginas web</li>
+      <li id="srv3">Aplicaciones móviles</li>
+      <li id="srv4">Consultoría tecnológica</li>
+    </ul>
+
+    <h2 id="contacto">Contacto</h2>
+    <p id="textoContacto">
+      Escríbenos a <strong>contacto@ejemplo.com</strong>
+    </p>
+  </main>
+
+  <footer>
+    <p id="footer">&copy; 2025 Mi Empresa</p>
+  </footer>
+
+  <script>
+    // Diccionario de traducciones
+    const traducciones = {
+      es: {
+        titulo: "Bienvenido a Mi Página Web",
+        subtitulo: "Ejemplo con traductor local",
+        nosotros: "Sobre Nosotros",
+        textoNosotros: "Somos una empresa dedicada a ofrecer soluciones tecnológicas innovadoras.",
+        servicios: "Nuestros Servicios",
+        srv1: "Desarrollo de software a medida",
+        srv2: "Diseño y desarrollo de páginas web",
+        srv3: "Aplicaciones móviles",
+        srv4: "Consultoría tecnológica",
+        contacto: "Contacto",
+        textoContacto: "Escríbenos a <strong>contacto@ejemplo.com</strong>",
+        footer: "&copy; 2025 Mi Empresa"
+      },
+      en: {
+        titulo: "Welcome to My Website",
+        subtitulo: "Example with local translator",
+        nosotros: "About Us",
+        textoNosotros: "We are a company dedicated to offering innovative technological solutions.",
+        servicios: "Our Services",
+        srv1: "Custom software development",
+        srv2: "Web design and development",
+        srv3: "Mobile applications",
+        srv4: "Technology consulting",
+        contacto: "Contact",
+        textoContacto: "Write to us at <strong>contacto@ejemplo.com</strong>",
+        footer: "&copy; 2025 My Company"
+      },
+      fr: {
+        titulo: "Bienvenue sur mon site Web",
+        subtitulo: "Exemple avec traducteur local",
+        nosotros: "À propos de nous",
+        textoNosotros: "Nous sommes une entreprise dédiée à offrir des solutions technologiques innovantes.",
+        servicios: "Nos Services",
+        srv1: "Développement de logiciels sur mesure",
+        srv2: "Conception et développement de sites Web",
+        srv3: "Applications mobiles",
+        srv4: "Conseil technologique",
+        contacto: "Contact",
+        textoContacto: "Écrivez-nous à <strong>contacto@ejemplo.com</strong>",
+        footer: "&copy; 2025 Mon Entreprise"
+      },
+      pt: {
+        titulo: "Bem-vindo ao Meu Site",
+        subtitulo: "Exemplo com tradutor local",
+        nosotros: "Sobre Nós",
+        textoNosotros: "Somos uma empresa dedicada a oferecer soluções tecnológicas inovadoras.",
+        servicios: "Nossos Serviços",
+        srv1: "Desenvolvimento de software sob medida",
+        srv2: "Design e desenvolvimento de sites",
+        srv3: "Aplicativos móveis",
+        srv4: "Consultoria tecnológica",
+        contacto: "Contato",
+        textoContacto: "Escreva para nós em <strong>contacto@ejemplo.com</strong>",
+        footer: "&copy; 2025 Minha Empresa"
+      }
+    };
+
+    function cambiarIdioma(idioma) {
+      for (let id in traducciones[idioma]) {
+        document.getElementById(id).innerHTML = traducciones[idioma][id];
+      }
+    }
+  </script>
+</body>
+</html>

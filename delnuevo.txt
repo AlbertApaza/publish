@@ -4,7 +4,7 @@ LO QUE QUIEREN
 -LAS FAQ MAS INTERACTIVAS TIPO QUE HAYA UN BUSCADOR DE PREGUNTAS FRECUENTES, TAMBIEN UNA LISTA ALGO ASI
 -EL APARTADO DE ADMISION PARA CADA UNO
 -ChatBot
--Cambiar de español a ingles xD
+-Cambiar de español a ingles 
 
 -EL NARRADOR
 -EL BOTON DE ACCESIBILIDAD QUE ESTE AHI EN TODOAS
@@ -57,3 +57,47 @@ o es tenerlo como un botón en el header, o también
 https://www.upt.edu.pe/upt/web/home/contenido/95/21222534 
 
 
+
+
+
+
+
+PARTE DE ADMISION:
+1.LANDING DE ADMISION ()
+1.1 APARTADO Admision imagen larga/ texto y boton postular
+1.2 APARTADO Proceso de Admision lista de 5 / un video en la 2da columnas y debajao deese video 2 botones quiero postilar y descargar prospecto
+1.3 APARTADO Descubre tu modalidad de ingreso 3 imagenes solapadas entre ellas, y cuando pase el mouse mostrar su contenido
+1.4 UN CONTENEDOR TIENE QUE DIFERENCIARSE -Centro Preuniversitario (una imagen en grande noma con u boton de conce mas)
+1.5 APARTADO Test Vocacional formulario con su boton de iniciar test
+1.6 APARTADO Aula Virtual
+1.7 UN CONTENEDOR TIENE QUE DIFERENCIARSE -Ruta Postula (3 imagenes altas INSCRIPCIONES-CRONOGRAMA-EVENTOS  O FERIAS)
+1.8 UN CONTENEDOR TIENE QUE DIFERENCIARSE -Bienestar Universitario (una imagen a la derecha y un boton de explora)
+
+en todo usa 1920x1080.png haz un header y footer sencillos
+
+
+
+Centro Preuniversitario
+
+
+
+
+2.CENTRO PRE UNIVERSITARIO +BLOG
+2.1.TE PRESENTAMOS UPT (3 TARJETAS CON IMAGEN Y TITULO INFERIOR EXAMEN ORDINARIO/EXAMEN EXTRAORDINARIO/CETRO PRE UNIVERSITARIO)
+2.2.PORQUE PREPARAME EN LA UPT (EN PANTALLA COMPLETO EL COLOR SOLIDO UPT BLUE (IMAGENES CON DESCRIPCION )INFRAESTRUCUTRA, COMPAÑERISMO, LABOR SOCIAL, LABORATOIROS, MODERIDAD, LICENCIADOS)
+2.3.EVENTOS (PONES EN TARJETAS CON IMAGEN Y EL TITULO INFERIOR DE CADA TARJETA)
+2.4.HISTORIAS DE EXITO(ESTUDIANTES QUE SE PREPARARON EN EL CENTRO PREUNIVERSITARIOS (TEXTO Y QUE SE MUEVA SOLO ALA SIGUIENTE HISTORIA LATERAL))
+
+
+3.RUTA POSTULA
+3.1. APARTADO Proceso de INSCRIPCIONES boton de postular
+3.2. APARTADO Cronograma del 1 al 5 lista de cronograma y mostrar en cual nos encontramos ahora
+3.3  APARTADO Eventos (tarjetas de eventos)
+
+4.BIENESTAR UNIVERSITARIO
+4.1. APARTADO Atencion Priamria de Salud
+4.2. Asistencia Social     (estara estirado de extrmo a extremo mostrando el conteniod )
+4.3. Tutoria y Consejeria 
+4.4. Recreacion y Deporte
+
+4.5 Promocion Cultura

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Abriendo UserWay…</title>
+  <meta http-equiv="refresh" content="2; url=https://userway.org/es/precios?tab=monitor">
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; align-items:center; justify-content:center; min-height:100vh; text-align:center; }
+    a { display:inline-block; padding:10px 16px; text-decoration:none; border:1px solid #333; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Redirigiendo a UserWay…</h1>
+    <p>Si no te redirige en 2 segundos, haz clic aquí:</p>
+    <p>
+      <a href="https://userway.org/es/precios?tab=monitor" target="_blank" rel="noopener">Abrir UserWay (Precios · Monitor)</a>
+    </p>
+  </main>
+
+  <script>
+    // Intento de apertura inmediata en nueva pestaña (algunos navegadores lo bloquean)
+    try {
+      const win = window.open("https://userway.org/es/precios?tab=monitor", "_blank", "noopener");
+      // Si está bloqueado, la meta-refresh hará la redirección en esta misma pestaña
+    } catch (e) { /* ignorar */ }
+  </script>
+</body>
+</html>

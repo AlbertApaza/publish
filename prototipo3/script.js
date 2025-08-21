@@ -3,44 +3,31 @@ document.addEventListener("DOMContentLoaded", function() {
     // --- TOP ANNOUNCEMENT BAR DISMISSAL ---
     const topAnnouncementBar = document.querySelector(".top-announcement-bar");
     const closeAnnouncementBtn = document.querySelector(".close-announcement");
-
     if (topAnnouncementBar && closeAnnouncementBtn) {
         closeAnnouncementBtn.addEventListener("click", () => {
             topAnnouncementBar.style.display = "none";
-            // Optionally, you can use localStorage to keep it dismissed across sessions:
-            // localStorage.setItem("hideAnnouncement", "true");
         });
-
-        // Uncomment the following lines if you want the announcement to stay hidden
-        // after being dismissed and the user revisits the page.
-        // if (localStorage.getItem("hideAnnouncement") === "true") {
-        //     topAnnouncementBar.style.display = "none";
-        // }
     }
 
     // --- MENÚ HAMBURGUESA Y SUBMENÚS MÓVILES ---
-    // Scoped selectors to target elements within the .main-header only
     const hamburger = document.querySelector(".main-header .hamburger");
     const navMenu = document.querySelector(".main-header .nav-menu");
     const hasSubmenuItems = document.querySelectorAll(".main-header .has-submenu > a");
-
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
             navMenu.classList.toggle("active");
         });
-
         hasSubmenuItems.forEach(item => {
             item.addEventListener("click", function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
-                    // Close other open submenus
                     document.querySelectorAll(".main-header .has-submenu.open").forEach(openSubmenu => {
                         if (openSubmenu !== this.parentElement) {
                             openSubmenu.classList.remove("open");
                         }
                     });
-                    this.parentElement.classList.toggle("open"); // Toggle current submenu
+                    this.parentElement.classList.toggle("open");
                 }
             });
         });
@@ -55,12 +42,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const slideContent = document.querySelector(".slide-content");
     const slideTitle = document.getElementById("slide-title");
     const slideText = document.getElementById("slide-text");
-
     if (slides.length > 0) {
         let currentSlide = 0;
         let slideInterval;
         let isPaused = false;
-
         slides.forEach((_, index) => {
             if (dotsContainer){
                 const dot = document.createElement("div");
@@ -70,8 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 dotsContainer.appendChild(dot);
             }
         });
-        const dots = document.querySelectorAll(".dot"); // Re-query dots after creation
-
+        const dots = document.querySelectorAll(".dot");
         function updateContent(index) {
             if (slideContent && slideTitle && slideText && slides[index]) {
                 slideContent.style.opacity = '0';
@@ -80,11 +64,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     slideTitle.textContent = slides[index].dataset.title;
                     slideText.textContent = slides[index].dataset.text;
                     slideContent.style.opacity = '1';
-                    slideContent.style.transform = 'translateY(0)'; // Corrected assignment
+                    slideContent.style.transform = 'translateY(0)';
                 }, 400);
             }
         }
-
         function showSlide(index) {
             slides.forEach((slide, i) => {
                 slide.classList.remove("active");
@@ -97,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 currentSlide = index;
             }
         }
-
         function nextSlide() { showSlide((currentSlide + 1) % slides.length); }
         function prevSlide() { showSlide((currentSlide - 1 + slides.length) % slides.length); }
         function startSlider() { slideInterval = setInterval(nextSlide, 5000); }
@@ -105,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
             clearInterval(slideInterval);
             if (!isPaused) startSlider();
         }
-
         if (nextBtn) nextBtn.addEventListener("click", () => { nextSlide(); resetInterval(); });
         if (prevBtn) prevBtn.addEventListener("click", () => { prevSlide(); resetInterval(); });
         if (playPauseBtn) {
@@ -123,20 +104,63 @@ document.addEventListener("DOMContentLoaded", function() {
         startSlider();
     }
 
-    // --- ACORDEÓN VERTICAL DE SERVICIOS PARA MÓVIL (CORREGIDO) ---
+    // --- ACORDEÓN VERTICAL DE SERVICIOS PARA MÓVIL ---
     const accordionPanels = document.querySelectorAll('.services-section .accordion-panel');
     accordionPanels.forEach(panel => {
         panel.addEventListener('click', (e) => {
             if (window.innerWidth <= 768) {
-                // Prevent button link activation when opening/closing accordion on mobile
                 if (!e.target.classList.contains('btn')) {
                     const wasActive = panel.classList.contains('active');
-                    accordionPanels.forEach(p => p.classList.remove('active')); // Close all others
+                    accordionPanels.forEach(p => p.classList.remove('active'));
                     if (!wasActive) {
-                        panel.classList.add('active'); // Open clicked one if it wasn't active
+                        panel.classList.add('active');
                     }
                 }
             }
         });
     });
+
+    // --- LÓGICA DE BOTONES FLOTANTES ---
+    // 1. Asistente de Chat
+    const chatToggleButton = document.getElementById('chat-toggle-button');
+    const chatWidget = document.getElementById('chat-widget');
+    const chatCloseButton = document.getElementById('chat-close-button');
+
+    if (chatToggleButton && chatWidget && chatCloseButton) {
+        const toggleWidget = () => {
+            chatWidget.classList.toggle('open');
+        };
+        chatToggleButton.addEventListener('click', toggleWidget);
+        chatCloseButton.addEventListener('click', toggleWidget);
+    }
+    
+    // 2. Traductor de Google (VERSIÓN CORREGIDA Y ROBUSTA)
+    const translateFab = document.getElementById('translate-fab');
+    if (translateFab) {
+        // Usamos un intervalo para esperar a que el widget de Google se cargue,
+        // ya que es un proceso asíncrono.
+        const checkGoogleTranslateInterval = setInterval(() => {
+            const googleTrigger = document.querySelector('#google_translate_element .goog-te-gadget-simple');
+            
+            // Si el elemento ya existe en el DOM...
+            if (googleTrigger) {
+                // ...detenemos el intervalo para no seguir buscando.
+                clearInterval(checkGoogleTranslateInterval);
+
+                // Y ahora sí, asignamos el evento de clic a nuestro botón flotante.
+                translateFab.addEventListener('click', () => {
+                    // Simulamos un clic en el widget original de Google (que está oculto).
+                    googleTrigger.click();
+                });
+
+                console.log("Listener del traductor de Google asignado correctamente.");
+            }
+        }, 200); // Revisa cada 200 milisegundos.
+
+        // Para seguridad, detenemos la búsqueda después de 10 segundos
+        // por si el script de Google falla por alguna razón.
+        setTimeout(() => {
+            clearInterval(checkGoogleTranslateInterval);
+        }, 10000);
+    }
 });

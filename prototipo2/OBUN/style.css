@@ -1,0 +1,122 @@
+/* ============================================= */
+/* VARIABLES Y ESTILOS GLOBALES                  */
+/* ============================================= */
+:root {
+    --upt-blue: #2D366F;
+    --upt-gold: #BD9C5D;
+    --text-dark: #212529;
+    --text-light: #6c757d;
+    --background-light: #f8f9fa;
+    --background-white: #ffffff;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-primary);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--background-white);
+}
+
+/* ============================================= */
+/* HEADER Y FOOTER (ESTILO CONSISTENTE)          */
+/* ============================================= */
+.main-header { background-color: var(--background-white); padding: 15px 0; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 1000; }
+.main-header .container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--upt-blue); text-decoration: none; }
+.pre-footer { padding: 60px 0; background-color: var(--background-light); }
+.pre-footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.pre-footer-col h4 { color: var(--upt-gold); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 0.5px; font-family: 'Montserrat', sans-serif; }
+.pre-footer-col h4.sub-heading { margin-top: 25px; }
+.pre-footer-col ul { list-style: none; padding: 0; }
+.pre-footer-col li { margin-bottom: 8px; }
+.pre-footer-col a { color: var(--text-dark); font-size: 0.95rem; text-decoration: none; transition: color 0.3s; }
+.pre-footer-col a:hover { color: var(--upt-gold); }
+.action-buttons .btn-outline { display: block; text-align: center; padding: 10px; margin-bottom: 10px; border: 1px solid var(--upt-blue); color: var(--upt-blue); border-radius: 5px; font-weight: 700; text-decoration: none; transition: background-color 0.3s, color 0.3s; }
+.action-buttons .btn-outline:hover { background-color: var(--upt-blue); color: var(--background-white); }
+.main-footer { background-color: var(--upt-blue); padding: 25px 0; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.footer-logo-bottom { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+.footer-logo-bottom img { height: 40px; }
+.footer-logo-bottom span { color: var(--background-white); font-weight: 700; line-height: 1.2; }
+.footer-legal-links { display: flex; gap: 20px; }
+.footer-legal-links a { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.3s; }
+.footer-legal-links a:hover { color: var(--background-white); }
+@media (max-width: 768px) { .footer-bottom { flex-direction: column; gap: 20px; text-align: center; } }
+
+
+/* ============================================= */
+/* SECCIÓN HERO DE BIENVENIDA                    */
+/* ============================================= */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(45, 54, 111, 0.7), rgba(45, 54, 111, 0.7)), url('https://placehold.co/1920x1080/6c757d/FFFFFF?text=Estudiantes+Felices') no-repeat center center/cover;
+    color: var(--background-white);
+    position: relative;
+}
+.hero-content h1 {
+    color: var(--background-white);
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+.hero-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 40px;
+    color: var(--background-white);
+    font-size: 2.5rem;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-20px); } 60% { transform: translateY(-10px); } }
+
+/* ============================================= */
+/* ESTILOS DE SECCIONES DE SERVICIO (Z-LAYOUT)    */
+/* ============================================= */
+.service-section {
+    min-height: 90vh;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+.service-section.is-visible { opacity: 1; }
+.service-section:nth-of-type(odd) { background-color: var(--background-light); }
+.service-section:nth-of-type(even) { background-color: var(--background-white); }
+.service-section .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 50px; align-items: center; }
+@media (min-width: 992px) {
+    .grid-2 { grid-template-columns: repeat(2, 1fr); gap: 80px; }
+    .grid-2.grid-2--swapped > .content-image { order: -1; }
+}
+
+.content-image {
+    transform: translateY(30px);
+    transition: transform 1s ease-out;
+}
+.content-text {
+    transform: translateY(30px);
+    transition: transform 1s ease-out 0.2s;
+}
+.is-visible .content-image, .is-visible .content-text {
+    transform: translateY(0);
+}
+.content-image img { width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(45, 54, 111, 0.15); border: 8px solid var(--background-white); }
+.content-text ion-icon { font-size: 3.5rem; color: var(--upt-gold); margin-bottom: 15px; }
+.content-text h2 { color: var(--upt-blue); font-size: 2.8rem; font-family: 'Montserrat', sans-serif; }
+.responsable-block { margin-top: 30px; padding: 15px; background-color: #e9ecef; border-left: 5px solid var(--upt-gold); border-radius: 0 8px 8px 0; }
+.responsable-block h4 { font-size: 1rem; color: var(--text-dark); font-weight: 600; margin-bottom: 5px; }
+.responsable-block p { margin: 0; color: var(--text-light); }
