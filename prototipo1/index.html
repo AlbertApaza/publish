@@ -304,6 +304,50 @@
                 </div>
             </section>
 
+    <!-- ======== CONTENEDOR DE BOTONES FLOTANTES ======== -->
+    <div class="floating-actions-container">
+        <!-- Botón para Traductor -->
+        <button id="translate-fab" class="floating-action-btn" aria-label="Seleccionar idioma">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        </button>
+        <!-- Botón para Asistente de Chat -->
+        <button id="chat-toggle-button" class="floating-action-btn" aria-label="Abrir asistente de ayuda">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </button>
+    </div>
+    
+    <!-- Widget de Google Translate (Oculto, pero necesario para la funcionalidad) -->
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <!-- Widget del Asistente (Se muestra al hacer clic en el botón de chat) -->
+    <div class="chat-widget-container" id="chat-widget">
+        <header class="widget-header">
+            <div class="header-info"><img src="LOGOUPT.png" alt="Logo UPT" class="widget-logo"><span>Asistente UPT</span></div>
+            <div class="agent-avatars"><span class="avatar">A</span><span class="avatar">S</span><span class="avatar">E</span></div>
+            <button class="close-button" id="chat-close-button" aria-label="Cerrar asistente"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+        </header>
+        <main class="widget-body">
+            <div class="welcome-message"><h2>Hola 👋 <br> ¿Cómo podemos ayudarte?</h2></div>
+            <a href="#" class="primary-action">
+                <div><strong>Envíanos un mensaje</strong><small>Solemos responder en menos de 5 minutos</small></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+            <div class="help-section">
+                <div class="search-bar"><input type="text" placeholder="Buscar ayuda"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+                <ul class="faq-list">
+                    <li><a href="#">¿Cuáles son los requisitos de admisión? <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
+                    <li><a href="#">Ver planes de estudio y mallas curriculares <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
+                    <li><a href="#">Costos de matrícula y pensiones <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
+                    <li><a href="#">Contacto de Bienestar Universitario <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></a></li>
+                </ul>
+            </div>
+        </main>
+        <footer class="widget-footer">
+            <button class="nav-item active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span>Inicio</span></button>
+            <button class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span>Mensajes</span></button>
+            <button class="nav-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="17" x2="12.01" y2="17"></line></svg><span>Ayuda</span></button>
+        </footer>
+    </div>
         </main>
         
         <!-- ==================== FOOTER ESTILO STANFORD ==================== -->
